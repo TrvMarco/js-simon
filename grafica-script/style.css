@@ -1,0 +1,59 @@
+/*----------
+    reset
+----------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*----------
+   main
+----------*/
+body{
+    padding: 50px;
+    background-color: rgb(31, 31, 31);
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: antiquewhite;
+}
+
+#title{
+    font-size: 40px;
+    text-align: center;
+}
+
+.play{
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.btn{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#section-cpu-numbers{
+    padding: 70px;
+    text-align: center;
+    display: none;
+}
+
+.cpu-numbers{
+    padding: 100px;
+    font-size: 50px;
+    color: rgb(255, 66, 66);
+}
+
+.tentativi{
+    text-align: center;
+    padding: 200px;
+}
+.uno, .due, .tre{
+    padding: 10px;
+    height: 50px;
+    font-size: 25px;
+    color: rgb(255, 66, 66);
+}
