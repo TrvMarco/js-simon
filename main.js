@@ -17,20 +17,27 @@ const userNumbersArray = [];
 const compatibleNumbers = [];
 setTimeout(function(){
     for(let i = 0; i < 5; i++){
-        let userNumbersInput = Number(prompt("Inserisci i numeri visualizzati precedentemente!"));
+        let userNumbersInput = Number(prompt("Inserisci i numeri visualizzati precedentemente! (UNO ALLA VOLTA) "));
         userNumbersArray.push(userNumbersInput);
     };    
     
+    // for(let i = 0; i < randomNumbers.length; i++){
+    //     for(let k = 0; k < userNumbersArray.length; k++){
+    //         if(randomNumbers[i] === userNumbersArray[k]){
+    //             compatibleNumbers.push(userNumbersArray[k]);
+    //         }
+    //     }
+    // }
+
     for(let i = 0; i < randomNumbers.length; i++){
-        for(let k = 0; k < userNumbersArray.length; k++){
-            if(randomNumbers[i] === userNumbersArray[k]){
-                compatibleNumbers.push(userNumbersArray[k]);
-            }
+        if(!userNumbersArray.includes(randomNumbers[i])){
+            compatibleNumbers.push(randomNumbers[i]);
         }
     }
+
     console.log("I numeri che hai indovinato sono:",compatibleNumbers.length);
-    console.log("Numeri da memorizzare:",randomNumbers);
-    console.log("Numeri inseriti",compatibleNumbers);
+    console.log("Numeri da memorizzare:", String(randomNumbers));
+    console.log("Numeri inseriti", String(compatibleNumbers));
 }, 1000*1);
 
 
