@@ -11,6 +11,7 @@ do{
     } 
 }while(randomNumbers.length < 5);
 alert(randomNumbers)
+
 // 2. Creo una funzione che dopo 30 secondi mi chieda i prompt per inserire i 5 numeri
 const userNumbersArray = [];
 const compatibleNumbers = [];
@@ -20,25 +21,16 @@ setTimeout(function(){
         userNumbersArray.push(userNumbersInput);
     };    
     
-
-
-    // if(randomNumbers.includes(userNumbersArray)){                         
-    //     console.log("include")                                    
-    // }else{ 
-    //     console.log("non include")
-    // }
-    // console.log(userNumbersArray)
-
-
     for(let i = 0; i < randomNumbers.length; i++){
-        for(let k = 0; k < userNumbersArray; k++){
+        for(let k = 0; k < userNumbersArray.length; k++){
             if(randomNumbers[i] === userNumbersArray[k]){
                 compatibleNumbers.push(userNumbersArray[k]);
             }
         }
     }
-    console.log(compatibleNumbers);
-
+    console.log("I numeri che hai indovinato sono:",compatibleNumbers.length);
+    console.log("Numeri da memorizzare:",randomNumbers);
+    console.log("Numeri inseriti",compatibleNumbers);
 }, 1000*1);
 
 
