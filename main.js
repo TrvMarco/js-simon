@@ -12,10 +12,39 @@ do{
 }while(randomNumbers.length < 5);
 alert(randomNumbers)
 // 2. Creo una funzione che dopo 30 secondi mi chieda i prompt per inserire i 5 numeri
-let userNumbersInput;
+const userNumbersArray = [];
+const compatibleNumbers = [];
 setTimeout(function(){
-     userNumbersInput = Number(prompt("Inserisci i numeri visualizzati precedentemente!"))
-}, 1000*3);
+    for(let i = 0; i < 5; i++){
+        let userNumbersInput = Number(prompt("Inserisci i numeri visualizzati precedentemente!"));
+        userNumbersArray.push(userNumbersInput);
+    };    
+    
+
+
+    // if(randomNumbers.includes(userNumbersArray)){                         
+    //     console.log("include")                                    
+    // }else{ 
+    //     console.log("non include")
+    // }
+    // console.log(userNumbersArray)
+
+
+    for(let i = 0; i < randomNumbers.length; i++){
+        for(let k = 0; k < userNumbersArray; k++){
+            if(randomNumbers[i] === userNumbersArray[k]){
+                compatibleNumbers.push(userNumbersArray[k]);
+            }
+        }
+    }
+    console.log(compatibleNumbers);
+
+}, 1000*1);
+
+
+
+
+
 
 
 
